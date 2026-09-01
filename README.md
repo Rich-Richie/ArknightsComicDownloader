@@ -1,22 +1,24 @@
 # ArknightsComicDownloader
 Download comics from Arknights.global automatically.
 
+For stickers and wallpapers downloader, check furthest down below.
+
 ## Features
-The script can figure out what comics are available or not.
+The comic downloader script can figure out what comics are available or not.
 
 ## Prerequisites
 You need **Python 3** installed on your system. The script uses only built-in standard Python libraries (`urllib`, `json`, `argparse`, `re`, `os`, `sys`), so **no external packages or dependencies are required**.
 
 ## Usage Guide
 
-Run the script using `python downloader.py` with one of the following arguments:
+Run the script using `python comic_downloader.py` with one of the following arguments:
 
 ### 1. List Available Comics Online
 
 Query the live API to retrieve the exact titles of all official comics currently available to download:
 
 ```powershell
-python downloader.py --list
+python comic_downloader.py --list
 ```
 
 **Example Output:**
@@ -37,17 +39,17 @@ Found 14 comics available:
 Download all chapters, covers, descriptions, and pages of a specific comic series by passing its full title inside quotes:
 
 ```powershell
-python downloader.py --download "<Comic Name>"
+python comic_downloader.py --download "<Comic Name>"
 ```
 
 **Examples:**
 
 ```powershell
 # Download the Departure series
-python downloader.py --download "Elite Operator: Departure"
+python comic_downloader.py --download "Elite Operator: Departure"
 
 # Download Sui's Daily Slices
-python downloader.py --download "Sui's Daily Slices: Wanna Shoot a Picture?"
+python comic_downloader.py --download "Sui's Daily Slices: Wanna Shoot a Picture?"
 ```
 
 ---
@@ -57,7 +59,7 @@ python downloader.py --download "Sui's Daily Slices: Wanna Shoot a Picture?"
 If you have pre-saved JSON response data (e.g., from network inspection or API dumps), you can feed it directly:
 
 ```powershell
-python downloader.py --file path/to/file.json
+python comic_downloader.py --file path/to/file.json
 ```
 
 ---
@@ -81,3 +83,16 @@ ArknightsComicDownloader/
 │       └── ...
 └── downloader.py
 ```
+
+## Sticker and Wallpaper Downloader
+
+There's no options to toggle. You use each script simply like this.
+```powershell
+python download_wallpapers.py
+```
+or
+```powershell
+python download_stickers.py
+```
+
+For the wallpapers, the name of the artists of each wallpaper will be noted in a txt file in the download folder.
