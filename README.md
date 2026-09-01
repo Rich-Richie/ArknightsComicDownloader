@@ -94,5 +94,5 @@ or
 ```powershell
 python download_stickers.py
 ```
-
+You can rerun the same command to download new wallpapers or stickers while skipping the downloaded ones.
 For the wallpapers, the name of the artists of each wallpaper will be noted in a txt file in the download folder.
